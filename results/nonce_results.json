@@ -1,0 +1,38 @@
+{
+  "determinism": {
+    "rsa-pss-3072": {
+      "distinct_signatures_in_20": 20,
+      "deterministic": false
+    },
+    "ecdsa-p256": {
+      "distinct_signatures_in_20": 20,
+      "deterministic": false
+    },
+    "ed25519": {
+      "distinct_signatures_in_20": 1,
+      "deterministic": true
+    },
+    "ecdsa-p256-rfc6979": {
+      "distinct_signatures_in_20": 1,
+      "deterministic": true,
+      "verifies": true
+    }
+  },
+  "ed25519_R": {
+    "same_msg_same_R": true,
+    "diff_msg_diff_R": true,
+    "R_msg0": "a489a35cb25333c38b3513015a63f4bd4d645f4f8caad7d5781d6877a88e6c31",
+    "R_msg1": "aff3de888e6ede39c9091af8a6d0d4ba48aa1016fb95eef6d562d59184de7842"
+  },
+  "ecdsa_nonce_reuse": {
+    "toy_sigs_verify_with_library": [
+      true,
+      true
+    ],
+    "same_r_observed": true,
+    "recovered_equals_private_key": true,
+    "forged_signature_verifies_under_victim_pub": true,
+    "control_distinct_nonces_same_r": false,
+    "victim_key_id": "11a7439f0d8febc8ae473287305754cf84e79343cb12b8b6f6b3219bc90557e5"
+  }
+}

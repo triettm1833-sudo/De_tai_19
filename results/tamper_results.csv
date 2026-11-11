@@ -1,0 +1,58 @@
+alg,test,description,component,expected,actual,verdict
+rsa-pss-3072,T00,Đối chứng dương: artifact và bundle nguyên vẹn,(không sửa),OK,OK,PASS
+rsa-pss-3072,T01,Lật 1 bit trong tệp nhị phân,artifact: demo-app.bin,HASH_MISMATCH,HASH_MISMATCH,PASS
+rsa-pss-3072,T02,Thêm 1 ký tự vào tài liệu,artifact: bien-ban.txt,HASH_MISMATCH,HASH_MISMATCH,PASS
+rsa-pss-3072,T03,Sửa metadata builder,manifest.provenance.builder,BAD_SIGNATURE,BAD_SIGNATURE,PASS
+rsa-pss-3072,T04,Sửa số phiên bản phát hành,manifest.release,BAD_SIGNATURE,BAD_SIGNATURE,PASS
+rsa-pss-3072,T05,Sửa commit nguồn (provenance),manifest.provenance.source.commit,BAD_SIGNATURE,BAD_SIGNATURE,PASS
+rsa-pss-3072,T06,Sửa manifest_version (hạ cấp),manifest.manifest_version,BAD_SIGNATURE,BAD_SIGNATURE,PASS
+rsa-pss-3072,T07,Sửa tệp rồi tính lại băm trong manifest,artifact + manifest.artifacts,BAD_SIGNATURE,BAD_SIGNATURE,PASS
+rsa-pss-3072,T08,Lật 1 bit trong chữ ký,signature,BAD_SIGNATURE,BAD_SIGNATURE,PASS
+rsa-pss-3072,T09,Đổi key_id sang khóa tin cậy khác cùng thuật toán,bundle.key_id,BAD_SIGNATURE,BAD_SIGNATURE,PASS
+rsa-pss-3072,T10,Đổi nhãn thuật toán trong bundle,bundle.alg,ALG_MISMATCH,ALG_MISMATCH,PASS
+rsa-pss-3072,T11,Đổi nhãn thuật toán và key_id không tồn tại,bundle.alg + key_id,UNKNOWN_KEY,UNKNOWN_KEY,PASS
+rsa-pss-3072,T12,Xóa một tệp khỏi gói,artifact: bien-ban.txt,MISSING_FILE,MISSING_FILE,PASS
+rsa-pss-3072,T13,Chèn thêm tệp không có trong manifest,artifact: backdoor.sh,UNLISTED_FILE,UNLISTED_FILE,PASS
+rsa-pss-3072,T14,Gỡ toàn bộ chữ ký,signatures,NO_SIGNATURE,NO_SIGNATURE,PASS
+rsa-pss-3072,T15,Bundle ký bằng khóa kẻ tấn công (không trong trust list),signer,UNKNOWN_KEY,UNKNOWN_KEY,PASS
+rsa-pss-3072,T16,Sửa thời gian trong dấu thời gian,signature.timestamp,TS_INVALID,TS_INVALID,PASS
+rsa-pss-3072,T17,Đổi thứ tự khóa/khoảng trắng JSON của manifest (vô hại),manifest (định dạng),OK,OK,PASS
+rsa-pss-3072,T18,Sửa trường ngoài phạm vi ký (unprotected.notes),bundle.unprotected,OK,OK,PASS
+ecdsa-p256,T00,Đối chứng dương: artifact và bundle nguyên vẹn,(không sửa),OK,OK,PASS
+ecdsa-p256,T01,Lật 1 bit trong tệp nhị phân,artifact: demo-app.bin,HASH_MISMATCH,HASH_MISMATCH,PASS
+ecdsa-p256,T02,Thêm 1 ký tự vào tài liệu,artifact: bien-ban.txt,HASH_MISMATCH,HASH_MISMATCH,PASS
+ecdsa-p256,T03,Sửa metadata builder,manifest.provenance.builder,BAD_SIGNATURE,BAD_SIGNATURE,PASS
+ecdsa-p256,T04,Sửa số phiên bản phát hành,manifest.release,BAD_SIGNATURE,BAD_SIGNATURE,PASS
+ecdsa-p256,T05,Sửa commit nguồn (provenance),manifest.provenance.source.commit,BAD_SIGNATURE,BAD_SIGNATURE,PASS
+ecdsa-p256,T06,Sửa manifest_version (hạ cấp),manifest.manifest_version,BAD_SIGNATURE,BAD_SIGNATURE,PASS
+ecdsa-p256,T07,Sửa tệp rồi tính lại băm trong manifest,artifact + manifest.artifacts,BAD_SIGNATURE,BAD_SIGNATURE,PASS
+ecdsa-p256,T08,Lật 1 bit trong chữ ký,signature,BAD_SIGNATURE,BAD_SIGNATURE,PASS
+ecdsa-p256,T09,Đổi key_id sang khóa tin cậy khác cùng thuật toán,bundle.key_id,BAD_SIGNATURE,BAD_SIGNATURE,PASS
+ecdsa-p256,T10,Đổi nhãn thuật toán trong bundle,bundle.alg,ALG_MISMATCH,ALG_MISMATCH,PASS
+ecdsa-p256,T11,Đổi nhãn thuật toán và key_id không tồn tại,bundle.alg + key_id,UNKNOWN_KEY,UNKNOWN_KEY,PASS
+ecdsa-p256,T12,Xóa một tệp khỏi gói,artifact: bien-ban.txt,MISSING_FILE,MISSING_FILE,PASS
+ecdsa-p256,T13,Chèn thêm tệp không có trong manifest,artifact: backdoor.sh,UNLISTED_FILE,UNLISTED_FILE,PASS
+ecdsa-p256,T14,Gỡ toàn bộ chữ ký,signatures,NO_SIGNATURE,NO_SIGNATURE,PASS
+ecdsa-p256,T15,Bundle ký bằng khóa kẻ tấn công (không trong trust list),signer,UNKNOWN_KEY,UNKNOWN_KEY,PASS
+ecdsa-p256,T16,Sửa thời gian trong dấu thời gian,signature.timestamp,TS_INVALID,TS_INVALID,PASS
+ecdsa-p256,T17,Đổi thứ tự khóa/khoảng trắng JSON của manifest (vô hại),manifest (định dạng),OK,OK,PASS
+ecdsa-p256,T18,Sửa trường ngoài phạm vi ký (unprotected.notes),bundle.unprotected,OK,OK,PASS
+ed25519,T00,Đối chứng dương: artifact và bundle nguyên vẹn,(không sửa),OK,OK,PASS
+ed25519,T01,Lật 1 bit trong tệp nhị phân,artifact: demo-app.bin,HASH_MISMATCH,HASH_MISMATCH,PASS
+ed25519,T02,Thêm 1 ký tự vào tài liệu,artifact: bien-ban.txt,HASH_MISMATCH,HASH_MISMATCH,PASS
+ed25519,T03,Sửa metadata builder,manifest.provenance.builder,BAD_SIGNATURE,BAD_SIGNATURE,PASS
+ed25519,T04,Sửa số phiên bản phát hành,manifest.release,BAD_SIGNATURE,BAD_SIGNATURE,PASS
+ed25519,T05,Sửa commit nguồn (provenance),manifest.provenance.source.commit,BAD_SIGNATURE,BAD_SIGNATURE,PASS
+ed25519,T06,Sửa manifest_version (hạ cấp),manifest.manifest_version,BAD_SIGNATURE,BAD_SIGNATURE,PASS
+ed25519,T07,Sửa tệp rồi tính lại băm trong manifest,artifact + manifest.artifacts,BAD_SIGNATURE,BAD_SIGNATURE,PASS
+ed25519,T08,Lật 1 bit trong chữ ký,signature,BAD_SIGNATURE,BAD_SIGNATURE,PASS
+ed25519,T09,Đổi key_id sang khóa tin cậy khác cùng thuật toán,bundle.key_id,BAD_SIGNATURE,BAD_SIGNATURE,PASS
+ed25519,T10,Đổi nhãn thuật toán trong bundle,bundle.alg,ALG_MISMATCH,ALG_MISMATCH,PASS
+ed25519,T11,Đổi nhãn thuật toán và key_id không tồn tại,bundle.alg + key_id,UNKNOWN_KEY,UNKNOWN_KEY,PASS
+ed25519,T12,Xóa một tệp khỏi gói,artifact: bien-ban.txt,MISSING_FILE,MISSING_FILE,PASS
+ed25519,T13,Chèn thêm tệp không có trong manifest,artifact: backdoor.sh,UNLISTED_FILE,UNLISTED_FILE,PASS
+ed25519,T14,Gỡ toàn bộ chữ ký,signatures,NO_SIGNATURE,NO_SIGNATURE,PASS
+ed25519,T15,Bundle ký bằng khóa kẻ tấn công (không trong trust list),signer,UNKNOWN_KEY,UNKNOWN_KEY,PASS
+ed25519,T16,Sửa thời gian trong dấu thời gian,signature.timestamp,TS_INVALID,TS_INVALID,PASS
+ed25519,T17,Đổi thứ tự khóa/khoảng trắng JSON của manifest (vô hại),manifest (định dạng),OK,OK,PASS
+ed25519,T18,Sửa trường ngoài phạm vi ký (unprotected.notes),bundle.unprotected,OK,OK,PASS

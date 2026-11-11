@@ -1,0 +1,23 @@
+{
+  "openssl": "OpenSSL 3.0.13 30 Jan 2024 (Library: OpenSSL 3.0.13 30 Jan 2024)",
+  "results": [
+    {
+      "alg": "rsa-pss-3072",
+      "python_sign_openssl_verify": true,
+      "openssl_sign_python_verify": true,
+      "openssl_rejects_modified_msg": true
+    },
+    {
+      "alg": "ecdsa-p256",
+      "python_sign_openssl_verify": true,
+      "openssl_sign_python_verify": true,
+      "openssl_rejects_modified_msg": true
+    },
+    {
+      "alg": "ed25519",
+      "python_sign_openssl_verify": true,
+      "openssl_sign_python_verify": true,
+      "openssl_rejects_modified_msg": true
+    }
+  ]
+}

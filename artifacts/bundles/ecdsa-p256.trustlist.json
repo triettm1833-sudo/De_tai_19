@@ -1,0 +1,37 @@
+{
+ "trust_list": {
+  "schema": "trust-list/1",
+  "version": 1,
+  "issued": "2026-01-01T00:00:00Z",
+  "expires": "2026-12-31T00:00:00Z",
+  "keys": [
+   {
+    "key_id": "0532b010d421e4ae3797f3de171be096f583caf6055fd732a96e398e156dd2d7",
+    "alg": "ecdsa-p256",
+    "pub": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEN20oExsfdMaDjubqoaf4HbHBDo2/aJdVQzF/39Sf35kMnYmYjCZDqUKtGNW2oD6qZbkIECU5OGQzahngjnwrfQ==",
+    "status": "active",
+    "not_before": "2026-01-01T00:00:00Z",
+    "not_after": null,
+    "compromised_since": null
+   },
+   {
+    "key_id": "cc48b4da82056b19028c37ea9b2c5e6a09f507ccef9cce815e565abfe56699d2",
+    "alg": "ecdsa-p256",
+    "pub": "MFkwEwYHKoZIzj0CAQYIKoZIzj0DAQcDQgAEQ/6P8/GWE2cy/mpLCsCQ31AE2rh+05/RG4wVetd9sAkkNS5mfzPk0rIhCbuS8NyabWgCmLo/a+ZoyN6KCBpK/Q==",
+    "status": "active",
+    "not_before": "2026-01-01T00:00:00Z",
+    "not_after": null,
+    "compromised_since": null
+   }
+  ],
+  "tsa": [
+   {
+    "key_id": "b4bfea33f5f1e53e733d676a578bc6d0a204855452c495286f2f30df19e451f4",
+    "alg": "ed25519",
+    "pub": "MCowBQYDK2VwAyEA1RqarA1A+6u51lUIfogg/zOo4PA20I4GtYEK014y738="
+   }
+  ]
+ },
+ "root_key_id": "190242698531e0c129808d936855874e54ba8bc0e6818d59815b4e77d2625f1b",
+ "sig": "vL4Y6gzMEQZ4nRwxXPirEBf5lC2z0tOBDzBrRseuplSV7qdyAKEnkyspS7rzAQZJgSwSzMVVdbcrXpvcJ+GcBw=="
+}

@@ -1,0 +1,49 @@
+{
+ "bundle_version": 1,
+ "manifest": {
+  "schema": "artifact-manifest/1",
+  "manifest_version": 1,
+  "name": "demo-app",
+  "release": "1.0.0",
+  "created": "2026-02-01T00:00:00Z",
+  "provenance": {
+   "builder": "ci-lab-01",
+   "source": {
+    "repo": "lab://demo",
+    "commit": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+   }
+  },
+  "artifacts": [
+   {
+    "path": "bien-ban.txt",
+    "sha256": "5fcb8850ae27f37fb36d4f606ed6cc9784ea80ac109fc51459f9119211a7a39c",
+    "size": 6955
+   },
+   {
+    "path": "conf/app.json",
+    "sha256": "81f7fb01e7f7eda0c224fa9009cdafae8392287ece5c3be3e218d24976035e16",
+    "size": 59
+   },
+   {
+    "path": "demo-app.bin",
+    "sha256": "76b3b0a966a0c1613ecc98a3105069b7c276c7fad5736879ebf9a7bfeddb0604",
+    "size": 65544
+   }
+  ]
+ },
+ "signatures": [
+  {
+   "alg": "rsa-pss-3072",
+   "key_id": "131f3ff294a4b88342145c65d8adcbdc0e3e65520a8489fd308e2e7dcdc68a70",
+   "sig": "TYNqDkliljPW3l4ne9RKNhrF1Y5FSTH93188LunuSprchTCwmIjfgpYgkS0z+AvF3oJYqoU71tt7eegxrlB1hCdo0hv1uKRB2yveGsDmXzww+eZH2rM5+BpJrAl/m2ooG8w02MprKruvVFrmbN4u5zuxOFhTjuQAhzPp+73pUFw0CTXTNUiqap4MrVc/ONxToG+9HeUEXmRyLEjUvZEpSmPgAfPFUud+yY2T0VVJ/L8QwosH69xfJgg5b8fhU2UqxASNxTkxrQw/rNmfb2HWGysCpseBhmN8YZd0tVI3J/ORxSqwCOFXaGX5ByoPWG2AbQyVLgtbVgFiD5Cs0gAZ3e3fgIrYndZEtipToXXQYA/9/Aa2syGyaaqY6+7qNrTNE3oc4cyiQCJeyKoUalwW3/W1o1k+08OGQam2bSjG6wicekOQ9CIFciHJrDBWzqh7bbdM6kTc2NV407Ce46lmDobmG9kvS4Tiq9Tt6FWO5uAoZ3yDiZZiPokSIrJ7EH0j",
+   "timestamp": {
+    "time": "2026-02-01T00:00:00Z",
+    "tsa_key_id": "b4bfea33f5f1e53e733d676a578bc6d0a204855452c495286f2f30df19e451f4",
+    "sig": "3QG6EqhETdblQfHBhKl4cPo/6Jue3JW+HkeOK+4aGEC9Tq1vm7wHCMgGVrBVSMX9dKeYZFwWn2qYnV0N6qnICg=="
+   }
+  }
+ ],
+ "unprotected": {
+  "notes": ""
+ }
+}

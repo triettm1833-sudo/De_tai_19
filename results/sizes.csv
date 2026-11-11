@@ -1,0 +1,5 @@
+alg,private_pkcs8_der_B,public_spki_der_B,sig_min_B,sig_mean_B,sig_max_B,key_id_hex_len
+rsa-pss-3072,1793,422,384,384.0,384,64
+ecdsa-p256,138,91,69,70.98,72,64
+ed25519,48,44,64,64.0,64,64
+rsa-pss-2048,1218,294,256,256.0,256,64

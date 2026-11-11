@@ -1,0 +1,57 @@
+[rsa-pss-3072] T00 Đối chứng dương: artifact và bundle nguyên vẹn -> ACCEPT code=OK expected=OK OK 
+[rsa-pss-3072] T01 Lật 1 bit trong tệp nhị phân -> REJECT code=HASH_MISMATCH expected=HASH_MISMATCH OK demo-app.bin
+[rsa-pss-3072] T02 Thêm 1 ký tự vào tài liệu -> REJECT code=HASH_MISMATCH expected=HASH_MISMATCH OK bien-ban.txt
+[rsa-pss-3072] T03 Sửa metadata builder -> REJECT code=BAD_SIGNATURE expected=BAD_SIGNATURE OK rsa-pss-3072:131f3ff2 chữ ký toán học không khớp
+[rsa-pss-3072] T04 Sửa số phiên bản phát hành -> REJECT code=BAD_SIGNATURE expected=BAD_SIGNATURE OK rsa-pss-3072:131f3ff2 chữ ký toán học không khớp
+[rsa-pss-3072] T05 Sửa commit nguồn (provenance) -> REJECT code=BAD_SIGNATURE expected=BAD_SIGNATURE OK rsa-pss-3072:131f3ff2 chữ ký toán học không khớp
+[rsa-pss-3072] T06 Sửa manifest_version (hạ cấp) -> REJECT code=BAD_SIGNATURE expected=BAD_SIGNATURE OK rsa-pss-3072:131f3ff2 chữ ký toán học không khớp
+[rsa-pss-3072] T07 Sửa tệp rồi tính lại băm trong manifest -> REJECT code=BAD_SIGNATURE expected=BAD_SIGNATURE OK rsa-pss-3072:131f3ff2 chữ ký toán học không khớp
+[rsa-pss-3072] T08 Lật 1 bit trong chữ ký -> REJECT code=BAD_SIGNATURE expected=BAD_SIGNATURE OK rsa-pss-3072:131f3ff2 chữ ký toán học không khớp
+[rsa-pss-3072] T09 Đổi key_id sang khóa tin cậy khác cùng thuật toán -> REJECT code=BAD_SIGNATURE expected=BAD_SIGNATURE OK rsa-pss-3072:f223105b chữ ký toán học không khớp
+[rsa-pss-3072] T10 Đổi nhãn thuật toán trong bundle -> REJECT code=ALG_MISMATCH expected=ALG_MISMATCH OK ed25519:131f3ff2 nhãn thuật toán khác trust list (rsa-pss-3072)
+[rsa-pss-3072] T11 Đổi nhãn thuật toán và key_id không tồn tại -> REJECT code=UNKNOWN_KEY expected=UNKNOWN_KEY OK ed25519:00000000 không có trong trust list v1
+[rsa-pss-3072] T12 Xóa một tệp khỏi gói -> REJECT code=MISSING_FILE expected=MISSING_FILE OK bien-ban.txt
+[rsa-pss-3072] T13 Chèn thêm tệp không có trong manifest -> REJECT code=UNLISTED_FILE expected=UNLISTED_FILE OK backdoor.sh
+[rsa-pss-3072] T14 Gỡ toàn bộ chữ ký -> REJECT code=NO_SIGNATURE expected=NO_SIGNATURE OK 
+[rsa-pss-3072] T15 Bundle ký bằng khóa kẻ tấn công (không trong trust list) -> REJECT code=UNKNOWN_KEY expected=UNKNOWN_KEY OK rsa-pss-3072:d9c0cc9c không có trong trust list v1
+[rsa-pss-3072] T16 Sửa thời gian trong dấu thời gian -> REJECT code=TS_INVALID expected=TS_INVALID OK rsa-pss-3072:131f3ff2 dấu thời gian không hợp lệ/không tin cậy
+[rsa-pss-3072] T17 Đổi thứ tự khóa/khoảng trắng JSON của manifest (vô hại) -> ACCEPT code=OK expected=OK OK 
+[rsa-pss-3072] T18 Sửa trường ngoài phạm vi ký (unprotected.notes) -> ACCEPT code=OK expected=OK OK 
+[ecdsa-p256] T00 Đối chứng dương: artifact và bundle nguyên vẹn -> ACCEPT code=OK expected=OK OK 
+[ecdsa-p256] T01 Lật 1 bit trong tệp nhị phân -> REJECT code=HASH_MISMATCH expected=HASH_MISMATCH OK demo-app.bin
+[ecdsa-p256] T02 Thêm 1 ký tự vào tài liệu -> REJECT code=HASH_MISMATCH expected=HASH_MISMATCH OK bien-ban.txt
+[ecdsa-p256] T03 Sửa metadata builder -> REJECT code=BAD_SIGNATURE expected=BAD_SIGNATURE OK ecdsa-p256:0532b010 chữ ký toán học không khớp
+[ecdsa-p256] T04 Sửa số phiên bản phát hành -> REJECT code=BAD_SIGNATURE expected=BAD_SIGNATURE OK ecdsa-p256:0532b010 chữ ký toán học không khớp
+[ecdsa-p256] T05 Sửa commit nguồn (provenance) -> REJECT code=BAD_SIGNATURE expected=BAD_SIGNATURE OK ecdsa-p256:0532b010 chữ ký toán học không khớp
+[ecdsa-p256] T06 Sửa manifest_version (hạ cấp) -> REJECT code=BAD_SIGNATURE expected=BAD_SIGNATURE OK ecdsa-p256:0532b010 chữ ký toán học không khớp
+[ecdsa-p256] T07 Sửa tệp rồi tính lại băm trong manifest -> REJECT code=BAD_SIGNATURE expected=BAD_SIGNATURE OK ecdsa-p256:0532b010 chữ ký toán học không khớp
+[ecdsa-p256] T08 Lật 1 bit trong chữ ký -> REJECT code=BAD_SIGNATURE expected=BAD_SIGNATURE OK ecdsa-p256:0532b010 chữ ký toán học không khớp
+[ecdsa-p256] T09 Đổi key_id sang khóa tin cậy khác cùng thuật toán -> REJECT code=BAD_SIGNATURE expected=BAD_SIGNATURE OK ecdsa-p256:cc48b4da chữ ký toán học không khớp
+[ecdsa-p256] T10 Đổi nhãn thuật toán trong bundle -> REJECT code=ALG_MISMATCH expected=ALG_MISMATCH OK ed25519:0532b010 nhãn thuật toán khác trust list (ecdsa-p256)
+[ecdsa-p256] T11 Đổi nhãn thuật toán và key_id không tồn tại -> REJECT code=UNKNOWN_KEY expected=UNKNOWN_KEY OK ed25519:00000000 không có trong trust list v1
+[ecdsa-p256] T12 Xóa một tệp khỏi gói -> REJECT code=MISSING_FILE expected=MISSING_FILE OK bien-ban.txt
+[ecdsa-p256] T13 Chèn thêm tệp không có trong manifest -> REJECT code=UNLISTED_FILE expected=UNLISTED_FILE OK backdoor.sh
+[ecdsa-p256] T14 Gỡ toàn bộ chữ ký -> REJECT code=NO_SIGNATURE expected=NO_SIGNATURE OK 
+[ecdsa-p256] T15 Bundle ký bằng khóa kẻ tấn công (không trong trust list) -> REJECT code=UNKNOWN_KEY expected=UNKNOWN_KEY OK ecdsa-p256:13fab788 không có trong trust list v1
+[ecdsa-p256] T16 Sửa thời gian trong dấu thời gian -> REJECT code=TS_INVALID expected=TS_INVALID OK ecdsa-p256:0532b010 dấu thời gian không hợp lệ/không tin cậy
+[ecdsa-p256] T17 Đổi thứ tự khóa/khoảng trắng JSON của manifest (vô hại) -> ACCEPT code=OK expected=OK OK 
+[ecdsa-p256] T18 Sửa trường ngoài phạm vi ký (unprotected.notes) -> ACCEPT code=OK expected=OK OK 
+[ed25519] T00 Đối chứng dương: artifact và bundle nguyên vẹn -> ACCEPT code=OK expected=OK OK 
+[ed25519] T01 Lật 1 bit trong tệp nhị phân -> REJECT code=HASH_MISMATCH expected=HASH_MISMATCH OK demo-app.bin
+[ed25519] T02 Thêm 1 ký tự vào tài liệu -> REJECT code=HASH_MISMATCH expected=HASH_MISMATCH OK bien-ban.txt
+[ed25519] T03 Sửa metadata builder -> REJECT code=BAD_SIGNATURE expected=BAD_SIGNATURE OK ed25519:3c62bd0b chữ ký toán học không khớp
+[ed25519] T04 Sửa số phiên bản phát hành -> REJECT code=BAD_SIGNATURE expected=BAD_SIGNATURE OK ed25519:3c62bd0b chữ ký toán học không khớp
+[ed25519] T05 Sửa commit nguồn (provenance) -> REJECT code=BAD_SIGNATURE expected=BAD_SIGNATURE OK ed25519:3c62bd0b chữ ký toán học không khớp
+[ed25519] T06 Sửa manifest_version (hạ cấp) -> REJECT code=BAD_SIGNATURE expected=BAD_SIGNATURE OK ed25519:3c62bd0b chữ ký toán học không khớp
+[ed25519] T07 Sửa tệp rồi tính lại băm trong manifest -> REJECT code=BAD_SIGNATURE expected=BAD_SIGNATURE OK ed25519:3c62bd0b chữ ký toán học không khớp
+[ed25519] T08 Lật 1 bit trong chữ ký -> REJECT code=BAD_SIGNATURE expected=BAD_SIGNATURE OK ed25519:3c62bd0b chữ ký toán học không khớp
+[ed25519] T09 Đổi key_id sang khóa tin cậy khác cùng thuật toán -> REJECT code=BAD_SIGNATURE expected=BAD_SIGNATURE OK ed25519:31db6a34 chữ ký toán học không khớp
+[ed25519] T10 Đổi nhãn thuật toán trong bundle -> REJECT code=ALG_MISMATCH expected=ALG_MISMATCH OK ecdsa-p256:3c62bd0b nhãn thuật toán khác trust list (ed25519)
+[ed25519] T11 Đổi nhãn thuật toán và key_id không tồn tại -> REJECT code=UNKNOWN_KEY expected=UNKNOWN_KEY OK ecdsa-p256:00000000 không có trong trust list v1
+[ed25519] T12 Xóa một tệp khỏi gói -> REJECT code=MISSING_FILE expected=MISSING_FILE OK bien-ban.txt
+[ed25519] T13 Chèn thêm tệp không có trong manifest -> REJECT code=UNLISTED_FILE expected=UNLISTED_FILE OK backdoor.sh
+[ed25519] T14 Gỡ toàn bộ chữ ký -> REJECT code=NO_SIGNATURE expected=NO_SIGNATURE OK 
+[ed25519] T15 Bundle ký bằng khóa kẻ tấn công (không trong trust list) -> REJECT code=UNKNOWN_KEY expected=UNKNOWN_KEY OK ed25519:236cb784 không có trong trust list v1
+[ed25519] T16 Sửa thời gian trong dấu thời gian -> REJECT code=TS_INVALID expected=TS_INVALID OK ed25519:3c62bd0b dấu thời gian không hợp lệ/không tin cậy
+[ed25519] T17 Đổi thứ tự khóa/khoảng trắng JSON của manifest (vô hại) -> ACCEPT code=OK expected=OK OK 
+[ed25519] T18 Sửa trường ngoài phạm vi ký (unprotected.notes) -> ACCEPT code=OK expected=OK OK 

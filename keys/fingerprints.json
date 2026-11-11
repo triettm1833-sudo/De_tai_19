@@ -1,0 +1,57 @@
+{
+  "tamper-rsa-pss-3072-a": {
+    "alg": "rsa-pss-3072",
+    "key_id": "131f3ff294a4b88342145c65d8adcbdc0e3e65520a8489fd308e2e7dcdc68a70",
+    "short": "13:1F:3F:F2:94:A4:B8:83"
+  },
+  "tamper-ecdsa-p256-a": {
+    "alg": "ecdsa-p256",
+    "key_id": "0532b010d421e4ae3797f3de171be096f583caf6055fd732a96e398e156dd2d7",
+    "short": "05:32:B0:10:D4:21:E4:AE"
+  },
+  "tamper-ed25519-a": {
+    "alg": "ed25519",
+    "key_id": "3c62bd0baed904bc429ddcf6a58e2e5353d9a2d4c2f5ba576fda6607e5c74c77",
+    "short": "3C:62:BD:0B:AE:D9:04:BC"
+  },
+  "root": {
+    "alg": "ed25519",
+    "key_id": "190242698531e0c129808d936855874e54ba8bc0e6818d59815b4e77d2625f1b",
+    "short": "19:02:42:69:85:31:E0:C1"
+  },
+  "tsa": {
+    "alg": "ed25519",
+    "key_id": "b4bfea33f5f1e53e733d676a578bc6d0a204855452c495286f2f30df19e451f4",
+    "short": "B4:BF:EA:33:F5:F1:E5:3E"
+  },
+  "attacker-rsa-pss-3072": {
+    "alg": "rsa-pss-3072",
+    "key_id": "d9c0cc9cc8e7d55f292a8e2528e5d5fcf8a4fb0abb5cc24989e3ad6c5a025af9",
+    "short": "D9:C0:CC:9C:C8:E7:D5:5F"
+  },
+  "attacker-ecdsa-p256": {
+    "alg": "ecdsa-p256",
+    "key_id": "13fab78842642d8ee2febba4aec55701df397bec4a9d4487322156705fc4f102",
+    "short": "13:FA:B7:88:42:64:2D:8E"
+  },
+  "attacker-ed25519": {
+    "alg": "ed25519",
+    "key_id": "236cb784cf8d355a41ee0380c3d54ed7caa6a83d456568f29a12d55ccfc1e8c4",
+    "short": "23:6C:B7:84:CF:8D:35:5A"
+  },
+  "K1": {
+    "alg": "ed25519",
+    "key_id": "96bb8120d076939a58d0f2133022e9f22c91493a3882051abfcef143c7d3f763",
+    "short": "96:BB:81:20:D0:76:93:9A"
+  },
+  "K2": {
+    "alg": "ecdsa-p256",
+    "key_id": "2deb6aa880a1c9f92daa71de51d7cf290caeb0117ee866212d9cb7502c6b4e5f",
+    "short": "2D:EB:6A:A8:80:A1:C9:F9"
+  },
+  "K3": {
+    "alg": "ed25519",
+    "key_id": "63a40d9814440cb81a129cfb4e4d95847ff29ba421dbb319f4d2e350c5c92a95",
+    "short": "63:A4:0D:98:14:44:0C:B8"
+  }
+}

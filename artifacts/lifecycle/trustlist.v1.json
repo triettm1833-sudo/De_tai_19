@@ -1,0 +1,28 @@
+{
+ "trust_list": {
+  "schema": "trust-list/1",
+  "version": 1,
+  "issued": "2026-01-01T00:00:00Z",
+  "expires": "2026-05-01T00:00:00Z",
+  "keys": [
+   {
+    "key_id": "96bb8120d076939a58d0f2133022e9f22c91493a3882051abfcef143c7d3f763",
+    "alg": "ed25519",
+    "pub": "MCowBQYDK2VwAyEAelBeoyA0bw031KKUOKj6K4RqIkutYM8cBNUpm8V3inc=",
+    "status": "active",
+    "not_before": "2026-01-01T00:00:00Z",
+    "not_after": null,
+    "compromised_since": null
+   }
+  ],
+  "tsa": [
+   {
+    "key_id": "b4bfea33f5f1e53e733d676a578bc6d0a204855452c495286f2f30df19e451f4",
+    "alg": "ed25519",
+    "pub": "MCowBQYDK2VwAyEA1RqarA1A+6u51lUIfogg/zOo4PA20I4GtYEK014y738="
+   }
+  ]
+ },
+ "root_key_id": "190242698531e0c129808d936855874e54ba8bc0e6818d59815b4e77d2625f1b",
+ "sig": "wyMEIOMu6qhv5zfDOwcH/eJCGQnHlYDfQ483cQq2agB6cGnB33rKFiVkKB3wve+cv8+CJ7QFbm9x7jei553tBg=="
+}

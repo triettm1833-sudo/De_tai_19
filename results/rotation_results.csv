@@ -1,0 +1,13 @@
+id,now,client_trust_list,release,signers,expected,actual,verdict,note
+R01,2026-02-10,v1,1.0.0,ed25519:96bb,OK,OK,PASS,Cơ sở: K1 duy nhất
+R02,2026-03-20,v1,1.1.0,ed25519:96bb+ecdsa-p256:2deb,OK,OK,PASS,Client CHƯA cập nhật vẫn xác minh được nhờ chữ ký K1 (chồng lấn)
+R03,2026-03-20,v2,1.1.0,ed25519:96bb+ecdsa-p256:2deb,OK,OK,PASS,Client đã cập nhật: chấp nhận cả hai chữ ký
+R04,2026-04-15,v3,1.2.0,ecdsa-p256:2deb,OK,OK,PASS,Chỉ ký K2 sau khi K1 nghỉ hưu
+R05,2026-04-15,v1,1.2.0,ecdsa-p256:2deb,UNKNOWN_KEY,UNKNOWN_KEY,PASS,"Client kẹt ở v1: fail-closed, buộc cập nhật trust list"
+R06,2026-06-01,v3,1.0.0,ed25519:96bb,OK,OK,PASS,K1 đã nghỉ hưu nhưng chữ ký có dấu thời gian 02-01 nằm trong hiệu lực
+R07,2026-06-01,v3,1.0.0,ed25519:96bb,KEY_EXPIRED,KEY_EXPIRED,PASS,Cùng bản phát hành nhưng KHÔNG có dấu thời gian: bị từ chối
+R08,2026-06-01,v3,1.1.0,ed25519:96bb+ecdsa-p256:2deb,OK,OK,PASS,Bản ký kép vẫn xác minh qua K2 (và K1 nhờ dấu thời gian)
+R09,2026-06-01,v3,1.2.0,ecdsa-p256:2deb,OK,OK,PASS,
+R10,2026-06-01,v1,1.2.0,ecdsa-p256:2deb,TRUSTLIST_EXPIRED,TRUSTLIST_EXPIRED,PASS,Trust list v1 hết hạn 05-01: client không cập nhật bị từ chối thay vì tin mù
+R11,2026-06-01,v?(rollback),1.2.0,ecdsa-p256:2deb,TRUSTLIST_ROLLBACK,TRUSTLIST_ROLLBACK,PASS,"Kẻ tấn công phát lại v1 cho client đã thấy v3 (nhưng v1 đã hết hạn, kiểm tra rollback chạy trước hạn dùng)"
+R12,2026-08-15,v3,1.2.0,ecdsa-p256:2deb,TRUSTLIST_EXPIRED,TRUSTLIST_EXPIRED,PASS,Trust list v3 hết hạn 07-30

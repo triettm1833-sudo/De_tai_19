@@ -1,0 +1,49 @@
+{
+ "bundle_version": 1,
+ "manifest": {
+  "schema": "artifact-manifest/1",
+  "manifest_version": 5,
+  "name": "demo-app",
+  "release": "1.3.0",
+  "created": "2026-06-15T00:00:00Z",
+  "provenance": {
+   "builder": "ci-lab-01",
+   "source": {
+    "repo": "lab://demo",
+    "commit": "0000000000000000000000000000000000000005"
+   }
+  },
+  "artifacts": [
+   {
+    "path": "bien-ban.txt",
+    "sha256": "5fcb8850ae27f37fb36d4f606ed6cc9784ea80ac109fc51459f9119211a7a39c",
+    "size": 6955
+   },
+   {
+    "path": "conf/app.json",
+    "sha256": "81f7fb01e7f7eda0c224fa9009cdafae8392287ece5c3be3e218d24976035e16",
+    "size": 59
+   },
+   {
+    "path": "demo-app.bin",
+    "sha256": "76b3b0a966a0c1613ecc98a3105069b7c276c7fad5736879ebf9a7bfeddb0604",
+    "size": 65544
+   }
+  ]
+ },
+ "signatures": [
+  {
+   "alg": "ecdsa-p256",
+   "key_id": "2deb6aa880a1c9f92daa71de51d7cf290caeb0117ee866212d9cb7502c6b4e5f",
+   "sig": "MEYCIQDWCjfIPGyvndFfN3SAn9ryc1fPiSkL+F87RNk1OBje4QIhAMBAJcCgw8jHVy24S1A+KU3X37US3Y+AgtowCc8jv2H8",
+   "timestamp": {
+    "time": "2026-06-15T00:00:00Z",
+    "tsa_key_id": "b4bfea33f5f1e53e733d676a578bc6d0a204855452c495286f2f30df19e451f4",
+    "sig": "yC0NlQA7JmQy+IXDA7O5Ae4hRhApumEo4l0P2Re5R3ZR/WqaC49SLg+k45+p+kxuXrwyOwl8Acpxd8mLPwbbBg=="
+   }
+  }
+ ],
+ "unprotected": {
+  "notes": ""
+ }
+}

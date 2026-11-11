@@ -1,0 +1,37 @@
+{
+ "trust_list": {
+  "schema": "trust-list/1",
+  "version": 1,
+  "issued": "2026-01-01T00:00:00Z",
+  "expires": "2026-12-31T00:00:00Z",
+  "keys": [
+   {
+    "key_id": "131f3ff294a4b88342145c65d8adcbdc0e3e65520a8489fd308e2e7dcdc68a70",
+    "alg": "rsa-pss-3072",
+    "pub": "MIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEAvvLGv5YTsFHnRjlOn6fTrVHfns4ewweVebTlRuVIME4YYdogheQ3etCrTy+Ki9+HRHfROXC5Cq/5jByMOY3T5Mm74KpLjn14jh285IB86js1g45mgDOPrJ2vbyDUOPY+Vvtr10U0ALuY5WQQ4mkvFQ1O87H7u63O4L+pm03t0FZBXyvgHJdyU09keyAcXhoezH6EtHKCWrd8unkroeN9hUyEIhOCiKWU2HVmqzsVvEjhCChjPs6PRzPa+8MOzXyARE89NUm1/VP3pH1X8tTzKFlCJdUmIZ1XQsGC1GMUEyrJz/xLy7vbn05xyHUs+cvzxiGw4WbMHkxFWPi64jAtF0/wnH/eFosG2mfh+ROR8E2gfGDBCg3mjFgHG9uzu9RtanuqIABvw8cWxIKR1hdInUReQGN/0vJ3JsOf0NWknQKHG8AvW+TKsKwhBGRXDSP/PjOq5xczMGaLSlETMqPKsXXNcOsUOVUC+KcfhWVpXwshIFXfSqJ176hz0V+jr4yBAgMBAAE=",
+    "status": "active",
+    "not_before": "2026-01-01T00:00:00Z",
+    "not_after": null,
+    "compromised_since": null
+   },
+   {
+    "key_id": "f223105b229d04b1fc9f04dda0e0d0ba18f3b57b4e25a5753596d130a8997a65",
+    "alg": "rsa-pss-3072",
+    "pub": "MIIBojANBgkqhkiG9w0BAQEFAAOCAY8AMIIBigKCAYEAyip0q4MxPYhNUvxU1Zm4F1WajGsuF59aWy2Jg3AJRYH+BJOXPaZaKJ3zX7mQ161bADQx0RmfrFhwWHMkCTlJH8BAEaswTEzGAegjUsc+NTe1KPgWqvkxMtsLTq18lvsSM9zyF9k297WNWATzazKrc//O6lNK8nIK8hRfbJpwp6k26z/djDReZl7bFmhfOOwXTADYJDYGWlvlFY8q1fEaAUABFpgfgGtQND/VdBnKUNshCiVrIzjlq5oLC4RldWoUOTPpPozEWsfu3Znh7+ZKQmoFbtPR9xIBlYR7t6gCgAGf4UcriCbpXhbGtTVuN/MG0HSKUir9qajzDOdHgwIuWh6WkO9ZpLTUuiNYqjXcyOVUmajTztuvjosVPP9cLKIPn6KZ7ipw2wAopX0ASfcUgUZoS+HH09zpuCe/Qc8iL7T9Axx0Wd0Xf63fYr/Dj6M4YWg0Ct0ZGWo2mDJ2apB+AL/Qki8lULOYSJyssAIGVMZL8JAMXZxo4UFhv1VeRGapAgMBAAE=",
+    "status": "active",
+    "not_before": "2026-01-01T00:00:00Z",
+    "not_after": null,
+    "compromised_since": null
+   }
+  ],
+  "tsa": [
+   {
+    "key_id": "b4bfea33f5f1e53e733d676a578bc6d0a204855452c495286f2f30df19e451f4",
+    "alg": "ed25519",
+    "pub": "MCowBQYDK2VwAyEA1RqarA1A+6u51lUIfogg/zOo4PA20I4GtYEK014y738="
+   }
+  ]
+ },
+ "root_key_id": "190242698531e0c129808d936855874e54ba8bc0e6818d59815b4e77d2625f1b",
+ "sig": "kjewlIEEMiVmQ9gVmFUImpgKgCFtpGJ0oVmdZzdPwwICYKCWi9ahO/r7acP8i/nQ9h1LLVSYMggu6Wa8xzLNAQ=="
+}

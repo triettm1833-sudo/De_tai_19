@@ -1,0 +1,10 @@
+id,now,client_trust_list,release,signers,expected,actual,verdict,note
+C01,2026-06-21,v4,1.2.0,ecdsa-p256:2deb,OK,OK,PASS,Bản 1.2.0 ký K2 với dấu thời gian 04-10 < compromised_since 06-10: giữ hiệu lực
+C02,2026-06-21,v4,1.3.0,ecdsa-p256:2deb,REVOKED,REVOKED,PASS,Bản hợp lệ 1.3.0 ký K2 ngày 06-15 nằm trong cửa sổ nghi ngờ: phải ký lại
+C03,2026-06-21,v4,1.3.0,ed25519:63a4,OK,OK,PASS,1.3.0 ký lại bằng K3 (trust list v4)
+C04,2026-06-21,v4,1.2.1,ecdsa-p256:2deb,REVOKED,REVOKED,PASS,"Mã độc ký K2, có dấu thời gian THẬT từ TSA (06-12 >= 06-10)"
+C05,2026-06-21,v4,1.2.1,ecdsa-p256:2deb,REVOKED,REVOKED,PASS,"Mã độc ký K2, không dấu thời gian"
+C06,2026-06-21,v4,1.2.1,ecdsa-p256:2deb,TS_INVALID,TS_INVALID,PASS,Kẻ tấn công tự ký dấu thời gian lùi về 04-01: TSA không tin cậy
+C07,2026-06-15,v3,1.2.1,ecdsa-p256:2deb,OK,OK,PASS,RỦI RO DƯ: client còn trust list v3 (trước thu hồi) CHẤP NHẬN mã độc
+C08,2026-06-21,v3,1.2.1,ecdsa-p256:2deb,OK,OK,PASS,Client chưa nhận v4 sau 1 ngày: vẫn nằm trong cửa sổ phơi nhiễm đến khi cập nhật/hết hạn v3 (07-30)
+C09,2026-06-21,v?(rollback),1.2.1,ecdsa-p256:2deb,TRUSTLIST_ROLLBACK,TRUSTLIST_ROLLBACK,PASS,Phát lại trust list v3 cho client đã thấy v4
